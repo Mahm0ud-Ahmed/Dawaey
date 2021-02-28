@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.reminder.MainActivity">
+
+    <item
+        android:id="@+id/menu_Accept"
+        android:title="موافق"
+        android:icon="@drawable/ic_baseline_check"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/menu_delete"
+        android:title="حذف"
+        android:icon="@drawable/ic_baseline_delete"
+        app:showAsAction="ifRoom" />
+
+
+</menu>

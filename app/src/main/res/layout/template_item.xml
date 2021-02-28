@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+
+            <View
+                android:id="@+id/state"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/view_shape"
+                android:backgroundTint="@color/Red"
+                android:layout_alignParentEnd="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/state"
+                android:fontFamily="@font/cairo_semibold"
+                android:layout_marginEnd="16dp"
+                android:text="مفتوح"
+                android:textSize="12sp" />
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                />
+
+            <TextView
+                android:id="@+id/tv_medicine_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/state"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/cairo_semibold"
+                android:layout_marginEnd="16dp"
+                android:text="أوجمانتين"
+                android:textColor="#000000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_next_dose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/state"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/cairo"
+                android:text="الجرعة القادمة: 03:15 م"
+                android:textColor="@color/green"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_medicine_name"
+                android:layout_marginTop="4dp"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="@font/cairo"
+                android:layout_marginEnd="12dp"
+                android:text="المدة: كل يوم"
+                android:textColor="#B5B3B3"
+                android:textSize="12sp" />
+
+
+            <LinearLayout
+                android:id="@+id/linear_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_duration"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/tv_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:drawableEnd="@drawable/ic_baseline_edit"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/cairo"
+                    android:textColor="@color/green"
+                    android:text="تعديل"
+                    android:textSize="16sp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
+
+                <Button
+                    android:id="@+id/tv_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:drawableEnd="@drawable/ic_baseline_delete"
+                    android:drawablePadding="8dp"
+                    android:fontFamily="@font/cairo"
+                    android:textColor="@color/Red"
+                    android:text="حذف"
+                    android:textSize="16sp"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
